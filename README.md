@@ -11,14 +11,22 @@ For Windows:
 
   py sor-server.py server_ip_address server_port_number server_buffer_size server_payload_length  
   py sor-client.py server_ip_address server_port_number client_buffer_size client_payload_length read_file_name0 write_file_name0 *read_file_name1 write_file_name1 ...*
+  
+  e.g.  
+  - py sor-server.py 192.168.0.XXX XXXX 5012 2048
+  - py sor-client.py 192.168.0.XXX XXXX 10023 1000 server_file.txt new_local_file.txt
 
 For Linux: 
 
   python3 sor-server.py server_ip_address server_port_number server_buffer_size server_payload_length    
   python3 sor-client.py server_ip_address server_port_number client_buffer_size client_payload_length read_file_name0 write_file_name0 *read_file_name1 write_file_name1 ...*
+  
+  e.g.  
+  - python3 sor-server.py 192.168.0.XXX XXXX 5012 2048
+  - python3 sor-client.py 192.168.0.XXX XXXX 10023 1000 server_file.txt new_local_file.txt
 
 All arguments in italics are optional, though for every read_file_nameX there must be a corresponding write_file_nameX  
-Note that server_ip_address and server_port_number are always the local ip address and port number when used on the server, but could be the router's ip address and port number if the connection is not within LAN.
+Note that server_ip_address and server_port_number are always the local internal ip address and port number when used on the server, but could be the router's external ip address and corresponding port number if the connection is not within LAN.
 
 ## Program Details
 ### Connection Codes
